@@ -18,14 +18,14 @@
     </properties>
 
     <dependencies>
-        <!--tests-->
+        <!-- tests -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-        <!--logging-->
+        <!-- logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -36,7 +36,7 @@
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
-        <!--http-->
+        <!-- http -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -68,7 +68,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.github.user888mk.App</mainClass>
+                            <mainClass>io.github.mat3e.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

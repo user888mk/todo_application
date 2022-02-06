@@ -1,0 +1,22 @@
+2022-02-06 12:58:05 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table languages(\000d\000a    id int [*]unsigned primary key auto_increment,\000d\000a    welcomeMsg varchar(100) not null,\000d\000a    code varchar (3)\000d\000a)"; expected "ARRAY, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, DEFAULT, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+create table languages(
+    id int unsigned primary key auto_increment,
+    welcomeMsg varchar(100) not null,
+    code varchar (3)
+) [42001-210]
+2022-02-06 13:00:48 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table languages(\000d\000a    id int [*]unsigned primary key auto_increment,\000d\000a    welcomeMsg varchar(100) not null,\000d\000a    code varchar (3)\000d\000a)"; expected "ARRAY, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, DEFAULT, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+create table languages(
+    id int unsigned primary key auto_increment,
+    welcomeMsg varchar(100) not null,
+    code varchar (3)
+) [42001-210]
+2022-02-06 13:07:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table languages\000d\000a(\000d\000a    id         int [*]unsigned primary key auto_increment,\000d\000a    welcomeMsg varchar(100) not null,\000d\000a    code       varchar(3)\000d\000a)"; expected "ARRAY, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, DEFAULT, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+create table languages
+(
+    id         int unsigned primary key auto_increment,
+    welcomeMsg varchar(100) not null,
+    code       varchar(3)
+) [42001-210]

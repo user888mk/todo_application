@@ -1,5 +1,8 @@
-package com.github.user888mk;
+package com.github.user888mk.hello;
 
+import com.github.user888mk.hello.HelloService;
+import com.github.user888mk.lang.Lang;
+import com.github.user888mk.lang.LangRepository;
 import org.junit.Test;
 
 import java.util.Optional;
@@ -42,7 +45,7 @@ public class HelloServiceTest {
         // given
         var mockRepository = new LangRepository() {
             @Override
-            Optional<Lang> findById(Integer id) {
+            public Optional<Lang> findById(Integer id) {
                 return Optional.empty();
             }
         };
@@ -84,7 +87,7 @@ public class HelloServiceTest {
     private LangRepository fallbackIdLangRepository() {
         return new LangRepository() {
             @Override
-            Optional<Lang> findById(Integer id) {
+            public Optional<Lang> findById(Integer id) {
                 if (id.equals(HelloService.FALLBACK_LANG.getId())) {
                     return Optional.of(new Lang(null, FALLBACK_ID_WELCOME, null));
                 }
@@ -96,7 +99,7 @@ public class HelloServiceTest {
     private LangRepository alwaysReturningHelloRepository() {
         return new LangRepository() {
             @Override
-            Optional<Lang> findById(Integer id) {
+            public Optional<Lang> findById(Integer id) {
                 return Optional.of(new Lang(null, WELCOME, null));
             }
         };

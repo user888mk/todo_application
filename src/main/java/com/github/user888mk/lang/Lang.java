@@ -1,4 +1,4 @@
-package com.github.user888mk;
+package com.github.user888mk.lang;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "languages")
-class Lang {
+public class Lang {
     @Id
     @GeneratedValue(generator = "inc")
     @GenericGenerator(name = "inc", strategy = "increment")
@@ -24,7 +24,7 @@ class Lang {
     }
 
     //Hibernate need it
-   protected Lang() {
+    protected Lang() {
     }
 
     public Integer getId() {

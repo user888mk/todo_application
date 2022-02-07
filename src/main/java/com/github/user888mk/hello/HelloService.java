@@ -1,5 +1,7 @@
-package com.github.user888mk;
+package com.github.user888mk.hello;
 
+import com.github.user888mk.lang.Lang;
+import com.github.user888mk.lang.LangRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

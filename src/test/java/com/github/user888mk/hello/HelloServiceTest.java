@@ -1,6 +1,5 @@
 package com.github.user888mk.hello;
 
-import com.github.user888mk.hello.HelloService;
 import com.github.user888mk.lang.Lang;
 import com.github.user888mk.lang.LangRepository;
 import org.junit.Test;
@@ -20,7 +19,7 @@ public class HelloServiceTest {
         var SUT = new HelloService(mockRepository);
 
         // when
-        var result = SUT.prepareGreeting(null, "-1");
+        var result = SUT.prepareGreeting(null, -1);
 
         // then
         assertEquals(WELCOME + " " + HelloService.FALLBACK_NAME + "!", result);
@@ -34,7 +33,7 @@ public class HelloServiceTest {
         String name = "test";
 
         // when
-        var result = SUT.prepareGreeting(name, "-1");
+        var result = SUT.prepareGreeting(name, -1);
 
         // then
         assertEquals(WELCOME + " " + name + "!", result);
@@ -52,7 +51,7 @@ public class HelloServiceTest {
         var SUT = new HelloService(mockRepository);
 
         // when
-        var result = SUT.prepareGreeting(null, "-1");
+        var result = SUT.prepareGreeting(null, -1);
 
         // then
         assertEquals(HelloService.FALLBACK_LANG.getWelcomeMsg() + " " + HelloService.FALLBACK_NAME + "!", result);
@@ -66,19 +65,6 @@ public class HelloServiceTest {
 
         // when
         var result = SUT.prepareGreeting(null, null);
-
-        // then
-        assertEquals(FALLBACK_ID_WELCOME + " " + HelloService.FALLBACK_NAME + "!", result);
-    }
-
-    @Test
-    public void test_prepareGreeting_textLang_returnsGreetingWithFallbackIdLang() {
-        // given
-        var mockRepository = fallbackIdLangRepository();
-        var SUT = new HelloService(mockRepository);
-
-        // when
-        var result = SUT.prepareGreeting(null, "abc");
 
         // then
         assertEquals(FALLBACK_ID_WELCOME + " " + HelloService.FALLBACK_NAME + "!", result);
